@@ -38,7 +38,6 @@ public class TaskService {
     public Task updateTask(int id, Task task) {
         var originalTask = repository.findById(id).orElseThrow();
         
-        //TODO: This can be improved for sure...
         if (task.getTitle() != null && !task.getTitle().trim().isEmpty()) {
             originalTask.setTitle(task.getTitle());
         }
