@@ -15,7 +15,7 @@ public class Task {
     
     //region Enum
 
-    enum Status {
+    public enum Status {
         PENDING,
         IN_PROGRESS,
         COMPLETED
@@ -53,7 +53,9 @@ public class Task {
 
     //region Constructor
 
-    public Task() { }
+    public Task() {
+        status = Status.PENDING;
+    }
 
     public Task(int id, String title, String description, Status status, Date dueDate, Date createdAt,
             Date updatedAt) {
