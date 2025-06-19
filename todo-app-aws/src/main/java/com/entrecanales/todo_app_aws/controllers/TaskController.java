@@ -49,7 +49,6 @@ public class TaskController {
 
     @PostMapping("")
     public ResponseEntity<Task> addTask(@RequestBody NewTaskRequest request) {
-        //TODO: process POST request
         if (request == null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
@@ -60,7 +59,6 @@ public class TaskController {
 
     @PutMapping("{id}")
     public ResponseEntity<Task> putTask(@PathVariable int id, @RequestBody UpdateTaskRequest request) {
-        //TODO: process PUT request
         Task task;
         try {
             task = service.updateTask(id, request.toTask());
